@@ -1,0 +1,7 @@
+# conda env update --name brodie.srht.site --file environment.yml --prune
+name: brodie.srht.site
+channels:
+  - defaults
+dependencies:
+  - python=3
+  - poetry=1
