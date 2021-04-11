@@ -19,6 +19,3 @@ tasks:
 - package: |
     cd $site/site/output
     tar -cvz . > ../$file
-- upload: |
-    cd $site/site
-    acurl -f https://pages.sr.ht/publish/$site -Fcontent=@$file
