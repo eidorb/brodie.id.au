@@ -5,6 +5,7 @@ oauth: pages.sr.ht/PAGES:RW
 environment:
   site: brodie.srht.site
   file: site.tar.gz
+shell: true
 tasks:
 - poetry: |
     curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
