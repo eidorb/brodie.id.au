@@ -1,0 +1,24 @@
+image: debian/testing
+packages:
+  - python3-distutils
+oauth: pages.sr.ht/PAGES:RW
+environment:
+  site: brodie.srht.site
+  file: site.tar.gz
+shell: true
+tasks:
+- dependencies: |
+    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+    cd $site
+    source $HOME/.poetry/env
+    poetry install
+- build: |
+    cd $site/site
+    source $HOME/.poetry/env
+    poetry run nikola build
+- package: |
+    cd $site/site/output
+    tar -cvz . > ../$file
+- upload: |
+    cd $site/site
+    acurl -f https://pages.sr.ht/publish/$site -Fcontent=@$file
