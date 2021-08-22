@@ -16,3 +16,9 @@
       nikola build
 - Serve locally: `nikola serve`
 - Serve and automatically rebuild on changes: `nikola auto --browser`
+
+
+# Write
+
+- New post: `nikola new_post`
+- New notebook (Nikola adds a bit of metadata to the end of the notebook): `nikola new_post --format ipynb`
