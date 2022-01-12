@@ -26,3 +26,4 @@ tasks:
 - upload: |
     cd $site/site
     acurl -f https://pages.sr.ht/publish/$site -Fcontent=@$file
+    acurl -f https://pages.sr.ht/publish/brodie.id.au -Fcontent=@$file
