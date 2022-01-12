@@ -18,6 +18,10 @@ tasks:
     poetry run nikola build
 - package: |
     cd $site/site/output
+    # Complete build early if this is not the master branch.
+    if [ "$(git rev-parse master)" != "$(git rev-parse HEAD)" ]; then \
+        complete-build; \
+    fi
     tar -cvz . > ../$file
 - upload: |
     cd $site/site
