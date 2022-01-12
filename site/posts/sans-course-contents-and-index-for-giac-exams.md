@@ -16,6 +16,7 @@ Recently I sat a GIAC exam. I followed the advice of [this post](https://tisipho
 I documented a course outline in YAML and used a [Python script](https://github.com/eidorb/sans-index) to generate an Excel workbook containing a colourful contents and index.
 
 A detailed contents is equally as useful as an index. If I know the rough location of some topic, I can use the contents to quickly narrow down the search.
+<!-- TEASER_END -->
 
 
 # Course outline
