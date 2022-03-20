@@ -1,3 +1,17 @@
+# Sphinx migration
+
+- Take inspiration from these blog posts and GitHub issue:
+  - https://predictablynoisy.com/posts/2020/sphinx-blogging/
+  - https://ddanieltan.github.io/posts/2021/how_to_create_this_blog/
+  - https://github.com/executablebooks/jupyter-book/issues/900
+- Do the following things:
+  - [ ] Change automated build
+    - [ ] Try gcompat with Alpine Linux
+    - [ ] Use micromamba
+  - [ ] Configure Sphinx and dependencies for automated bare-bones blog
+  - [ ] Cut over old existing posts
+  - [ ] Fill in minimal content in broader website
+
 # Dependencies
 
 - Conda
