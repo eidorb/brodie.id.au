@@ -26,6 +26,8 @@ tasks:
   - package: |
       cd brodie.srht.site/site/output
       tar -cvz . > ~/site.tar.gz
+  - abort-if-master: |
+      cd brodie.srht.site
       # Complete build early if this is not the master branch.
       if [ "$(git rev-parse master)" != "$(git rev-parse HEAD)" ]; then \
           complete-build; \
