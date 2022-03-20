@@ -5,9 +5,9 @@
   - https://ddanieltan.github.io/posts/2021/how_to_create_this_blog/
   - https://github.com/executablebooks/jupyter-book/issues/900
 - Do the following things:
-  - [ ] Change automated build
-    - [ ] Try gcompat with Alpine Linux
-    - [ ] Use micromamba
+  - [x] Change automated build
+    - [x] Try gcompat with Alpine Linux
+    - [x] Use micromamba
   - [ ] Configure Sphinx and dependencies for automated bare-bones blog
   - [ ] Cut over old existing posts
   - [ ] Fill in minimal content in broader website
