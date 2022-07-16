@@ -1,15 +1,12 @@
 [tool.poetry]
-name = "brodie.srht.site"
+name = "brodie.id.au"
 version = "0.1.0"
 description = "My website."
 authors = []
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
-Nikola = {extras = ["extras"], version = "^8.1.3"}
-scipy = "^1.7.1"
-matplotlib = "^3.4.2"
-numpy = "^1.21.2"
+python = "^3.10"
+Sphinx = "^5.0.2"
 
 [tool.poetry.dev-dependencies]
 
