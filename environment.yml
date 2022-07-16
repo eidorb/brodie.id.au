@@ -1,6 +1,6 @@
 # conda env update --name brodie.srht.site --file environment.yml --prune
-name: brodie.srht.site
+name: brodie.id.au
 channels:
-  - defaults
+  - conda-forge
 dependencies:
   - python=3
