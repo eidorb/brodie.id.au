@@ -4,3 +4,5 @@ channels:
   - conda-forge
 dependencies:
   - python=3
+  # Version 16 is active LTS: https://nodejs.org/en/about/releases/.
+  - nodejs=16
