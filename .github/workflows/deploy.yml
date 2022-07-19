@@ -1,0 +1,61 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy-cdk-stack:
+    runs-on: ubuntu-latest
+    # Allows JWT to be requested from GitHub's OIDC provider.
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v3
+      - id: cache
+        uses: actions/cache@v3
+        with:
+          # Use contents of Mamba environment file and Poetry lock file as cache key.
+          key: ${{ hashFiles('environment.yml', 'poetry.lock') }}
+          # Cache micromamba binary, .bashrc, Poetry installation and Mamba environment.
+          path: |
+            ./bin/micromamba
+            ~/.bashrc
+            ~/.local/bin/poetry
+            ~/.local/share/pypoetry
+            ~/micromamba/envs
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          # Install micromamba.
+          wget -qO- https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
+          ./bin/micromamba shell hook > ~/.bashrc
+
+          # Install Poetry.
+          curl -sSL https://install.python-poetry.org | python3 -
+
+          # Create Mamba environment.
+          source ~/.bashrc
+          micromamba create --file environment.yml --yes
+          micromamba activate brodie.id.au
+
+          # Install Python package dependencies.
+          poetry install
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::961672313229:role/Account-GithubOidcRole20798CD3-LZP3AHTIPJU2
+          aws-region: ap-southeast-2
+      - run: |
+          source ~/.bashrc
+          micromamba activate brodie.id.au
+
+          # Build Sphinx website.
+          sphinx-build -b html brodie.id.au brodie.id.au/_build
+
+          # Install Node.js package dependencies.
+          npm ci
+
+          # Show CDK stack diff.
+          npx cdk diff
+
+          # Deploy CDK stack.
+          npx cdk deploy --require-approval never
