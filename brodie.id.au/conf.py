@@ -27,7 +27,7 @@ author = "Brodie Blackburn"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ["ablog", "sphinx.ext.intersphinx", "myst_nb"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -52,3 +52,8 @@ html_static_path = [
     # We're not using any custom static files.
     # "_static"
 ]
+
+
+# Myst-NB options.
+# Don't execute notebooks.
+nb_execution_mode = "off"
