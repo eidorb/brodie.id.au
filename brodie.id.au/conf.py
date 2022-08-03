@@ -15,10 +15,10 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 
-# -- Project information -----------------------------------------------------
-
+# Project information
 project = "brodie.id.au"
-copyright = "2022, Brodie Blackburn"
+html_title = "brodie.id.au"
+copyright = "2023, Brodie Blackburn"
 author = "Brodie Blackburn"
 
 
