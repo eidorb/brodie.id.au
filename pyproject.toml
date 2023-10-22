@@ -9,6 +9,7 @@ python = "^3.11"
 Sphinx = "^7.2.6"
 aws-cdk-lib = "^2.32.1"
 ablog = "^0.11.6"
+myst-nb = {git = "https://github.com/executablebooks/MyST-NB.git"}
 
 [tool.poetry.dev-dependencies]
 
