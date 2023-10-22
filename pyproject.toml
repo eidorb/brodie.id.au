@@ -5,7 +5,7 @@ description = "My website."
 authors = []
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 Sphinx = "^5.0.2"
 aws-cdk-lib = "^2.32.1"
 

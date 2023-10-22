@@ -1,8 +1,7 @@
-# conda env update --name brodie.srht.site --file environment.yml --prune
 name: brodie.id.au
 channels:
   - conda-forge
 dependencies:
-  - python=3
+  - python=3.11
   # Version 16 is active LTS: https://nodejs.org/en/about/releases/.
   - nodejs=16
