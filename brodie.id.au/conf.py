@@ -57,9 +57,11 @@ html_static_path = [
 # Myst-NB options.
 # Don't execute notebooks.
 nb_execution_mode = "off"
+myst_enable_extensions = ["dollarmath"]
 
 # ABlog options.
 post_date_format_short = "%b %d, %Y"
+post_auto_image = 1
 html_sidebars = {
     "index": [
         "about.html",
