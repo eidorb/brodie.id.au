@@ -57,3 +57,6 @@ html_static_path = [
 # Myst-NB options.
 # Don't execute notebooks.
 nb_execution_mode = "off"
+
+# ABlog options.
+post_date_format_short = "%b %d, %Y"
