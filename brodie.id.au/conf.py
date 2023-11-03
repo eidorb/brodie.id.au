@@ -60,3 +60,19 @@ nb_execution_mode = "off"
 
 # ABlog options.
 post_date_format_short = "%b %d, %Y"
+html_sidebars = {
+    "index": [
+        "about.html",
+        "navigation.html",
+        "searchbox.html",
+    ],
+    "blog/**": [
+        "about.html",
+        "ablog/postcard.html",
+        "ablog/recentposts.html",
+        "ablog/tagcloud.html",
+        "ablog/categories.html",
+        "ablog/archives.html",
+        "searchbox.html",
+    ],
+}
