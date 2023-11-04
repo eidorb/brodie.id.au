@@ -63,7 +63,8 @@ class Website(cdk.Stack):
             scope=self,
             id="Distribution",
             default_behavior=cloudfront.BehaviorOptions(
-                origin=cloudfront_origins.S3Origin(bucket)
+                origin=cloudfront_origins.S3Origin(bucket),
+                viewer_protocol_policy=cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
             ),
             certificate=certificate,
             default_root_object="index.html",
