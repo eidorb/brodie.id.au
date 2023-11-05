@@ -33,14 +33,6 @@ class Website(cdk.Stack):
             id="Bucket",
         )
 
-        # Populate bucket with files from build directory (relative to this module).
-        s3_deployment.BucketDeployment(
-            scope=self,
-            id="BucketDeployment",
-            destination_bucket=bucket,
-            sources=[s3_deployment.Source.asset(str(build_path))],
-        )
-
         # Reference existing hosted zone.
         hosted_zone = route53.HostedZone.from_hosted_zone_attributes(
             scope=self,
@@ -69,6 +61,16 @@ class Website(cdk.Stack):
             certificate=certificate,
             default_root_object="index.html",
             domain_names=["brodie.id.au"],
+        )
+
+        # Populate bucket with files from build directory (relative to this module).
+        s3_deployment.BucketDeployment(
+            scope=self,
+            id="BucketDeployment",
+            destination_bucket=bucket,
+            sources=[s3_deployment.Source.asset(str(build_path))],
+            # Invalidate CloudFront distribution cache on change.
+            distribution=distribution,
         )
 
         # Create an alias record for the CloudFront distribution.
