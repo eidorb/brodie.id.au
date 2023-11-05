@@ -63,15 +63,12 @@ myst_enable_extensions = ["dollarmath"]
 post_date_format_short = "%b %d, %Y"
 post_auto_image = 1
 html_sidebars = {
-    "index": [
-        "searchbox.html",
-    ],
     "blog/**": [
+        "navbar-logo.html",
         "ablog/postcard.html",
         "ablog/recentposts.html",
         "ablog/tagcloud.html",
         "ablog/categories.html",
         "ablog/archives.html",
-        "searchbox.html",
     ],
 }
