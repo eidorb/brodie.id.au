@@ -27,7 +27,7 @@ author = "Brodie Blackburn"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["ablog", "sphinx.ext.intersphinx", "myst_nb"]
+extensions = ["ablog", "sphinx.ext.intersphinx", "myst_nb", "sphinxnotes.isso"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -78,3 +78,6 @@ html_sidebars = {
         "searchbox.html",
     ],
 }
+
+# Isso comments configuration.
+isso_url = "https://pxp3m67gacb3v4egdgolhlczcu0wvgyz.lambda-url.ap-southeast-2.on.aws"
