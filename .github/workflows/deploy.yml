@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - comments
 jobs:
   deploy-cdk-stack:
     runs-on: ubuntu-latest
