@@ -80,4 +80,4 @@ html_sidebars = {
 }
 
 # Isso comments configuration.
-isso_url = "https://pxp3m67gacb3v4egdgolhlczcu0wvgyz.lambda-url.ap-southeast-2.on.aws"
+isso_url = "https://jpfqoj7br47fxockk6qfz7n6v40lhaxj.lambda-url.ap-southeast-2.on.aws"
