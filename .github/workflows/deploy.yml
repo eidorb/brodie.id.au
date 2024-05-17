@@ -11,25 +11,24 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - id: cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
-          # Use contents of Mamba environment file and Poetry lock file as cache key.
-          key: ${{ hashFiles('environment.yml', 'poetry.lock') }}
-          # Cache micromamba binary, .bashrc, Poetry installation and Mamba environment.
+          # Use contents of Mamba environment file, NPM lock file and Poetry lock file as cache key.
+          key: ${{ hashFiles('environment.yml', 'package-lock.json', 'poetry.lock') }}
+          # Cache micromamba binary, environments and pipx installs.
           path: |
             ./bin/micromamba
-            ~/.local/bin/poetry
-            ~/.local/share/pypoetry
             ~/micromamba/envs
+            ~/.local/pipx
       - if: steps.cache.outputs.cache-hit != 'true'
         run: |
           # Install micromamba.
           curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
 
           # Install Poetry.
-          curl -sSL https://install.python-poetry.org | python3 - --version 1.6.1
+          pipx install poetry~=1.8
 
           # Create Mamba environment.
           eval "$(./bin/micromamba shell hook -s posix)"
@@ -38,7 +37,7 @@ jobs:
 
           # Install Python package dependencies.
           poetry install
-      - uses: aws-actions/configure-aws-credentials@v1
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::961672313229:role/Account-GithubOidcRole20798CD3-LZP3AHTIPJU2
           aws-region: ap-southeast-2
