@@ -2,6 +2,6 @@ name: brodie.id.au
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
+  - python=3.12
   # Version 20 is active LTS: https://nodejs.org/en/about/previous-releases
   - nodejs=20
