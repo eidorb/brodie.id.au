@@ -45,6 +45,9 @@ jobs:
           eval "$(./bin/micromamba shell hook -s posix)"
           micromamba activate brodie.id.au
 
+          # Set timezone so that Sphinx uses local dates.
+          sudo timedatectl set-timezone Australia/Queensland
+
           # Build Sphinx website.
           sphinx-build -b html brodie.id.au brodie.id.au/_build
 
