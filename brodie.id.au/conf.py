@@ -63,8 +63,22 @@ myst_enable_extensions = ["dollarmath"]
 post_date_format_short = "%b %d, %Y"
 post_auto_image = 1
 html_sidebars = {
+    # blog page includes default and ablog sidebar elements.
+    "blog": [
+        "navbar-logo.html",
+        "icon-links.html",
+        "search-button-field.html",
+        "sbt-sidebar-nav.html",
+        "ablog/recentposts.html",
+        "ablog/tagcloud.html",
+        "ablog/categories.html",
+        "ablog/archives.html",
+    ],
+    # blog post pages drop sidebar nav and add post info (postcard) sidebar elements.
     "blog/**": [
         "navbar-logo.html",
+        "icon-links.html",
+        "search-button-field.html",
         "ablog/postcard.html",
         "ablog/recentposts.html",
         "ablog/tagcloud.html",
