@@ -1,18 +1,18 @@
 """Defines brodie.id.au website infrastructure using AWS CDK."""
+
 from pathlib import Path
 
 import aws_cdk as cdk
 import aws_cdk.aws_certificatemanager as acm
 import aws_cdk.aws_cloudfront as cloudfront
 import aws_cdk.aws_cloudfront_origins as cloudfront_origins
-import aws_cdk.aws_s3 as s3
-import aws_cdk.aws_s3_deployment as s3_deployment
 import aws_cdk.aws_route53 as route53
 import aws_cdk.aws_route53_targets as route53_targets
-
+import aws_cdk.aws_s3 as s3
+import aws_cdk.aws_s3_deployment as s3_deployment
 
 # Path to sphinx-build output, relative to this module.
-build_path = Path(__file__).parent / "brodie.id.au/_build"
+build_path = Path(__file__).parent / "_build"
 
 
 class App(cdk.App):

@@ -49,7 +49,7 @@ jobs:
           sudo timedatectl set-timezone Australia/Queensland
 
           # Build Sphinx website.
-          sphinx-build -b html brodie.id.au brodie.id.au/_build
+          sphinx-build --builder html brodie.id.au _build
 
           # Install Node.js package dependencies.
           npm ci
