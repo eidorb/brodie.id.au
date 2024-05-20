@@ -17,9 +17,8 @@
 
 # Project information
 project = "brodie.id.au"
-html_title = "brodie.id.au"
-copyright = "2023, Brodie Blackburn"
 author = "Brodie Blackburn"
+copyright = "2021, 2024"
 
 
 # -- General configuration ---------------------------------------------------
@@ -39,6 +38,10 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 
 # -- Options for HTML output -------------------------------------------------
+html_title = "brodie.id.au"
+
+# Include ‘Last updated on:’ timestamp.
+html_last_updated_fmt = "%b %d, %Y"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
