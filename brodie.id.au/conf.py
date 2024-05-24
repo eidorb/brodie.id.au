@@ -48,6 +48,15 @@ html_last_updated_fmt = "%b %d, %Y"
 #
 html_theme = "sphinx_book_theme"
 
+html_theme_options = {
+    # https://sphinx-book-theme.readthedocs.io/en/latest/components/source-files.html#set-your-source-repository
+    "repository_url": "https://github.com/eidorb/brodie.id.au",
+    # https://sphinx-book-theme.readthedocs.io/en/latest/components/source-files.html#add-a-button-to-the-page-source
+    "use_source_button": True,
+    "repository_branch": "master",
+    "path_to_docs": "brodie.id.au",
+}
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
