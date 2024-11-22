@@ -18,7 +18,7 @@
 # Project information
 project = "brodie.id.au"
 author = "Brodie Blackburn"
-copyright = "2021, 2024"
+copyright = "2020, 2021, 2024"
 
 
 # -- General configuration ---------------------------------------------------
