@@ -39,7 +39,7 @@ This Bogle fella has some interesting [ideas](https://www.bogleheads.org/wiki/Re
 
 ## The system
 
-Several times a month, GitHub Actions triggers automated workflows.
+A few times a month, GitHub Actions triggers scheduled [workflows](https://github.com/eidorb/portfolio/actions).
 
 
 ## A plain-text ledger
