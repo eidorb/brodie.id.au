@@ -63,9 +63,13 @@ html_logo = "ambigram.svg"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-# Include CSS to fix sidebar scrollbars.
-# TODO: Remove this once fix upstreamed to pydata-sphinx-theme.
-html_css_files = ["fix.css"]
+html_css_files = [
+    # Include CSS to fix sidebar scrollbars.
+    # TODO: Remove this once fix upstreamed to pydata-sphinx-theme.
+    "fix.css",
+    # Custom styling.
+    "custom.css",
+]
 
 
 # Myst-NB options.
