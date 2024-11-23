@@ -50,8 +50,8 @@ Usually the hard work is all in categorising transactions.
 If we stick to just balances, it's pretty simple to automate.
 
 Sometimes automatic retrieval breaks.
-These shitty bank websites change all the time 🤣!
-(At least there's [Up](https://developer.up.com.au).)
+These [shitty bank websites](https://github.com/eidorb/portfolio/tree/master/portfolio) change all the time 🤣!
+(At least there's [Up](https://developer.up.com.au)[^1].)
 
 Beancount ledgers are easily updated by hand. Balance entries looks like this:
 
