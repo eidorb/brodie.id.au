@@ -128,4 +128,4 @@ If the Purdue model is a network segmentation model, then network management is 
 
 If you find yourself face-to-face with the Purdue model in a conference call, please confirm you are not speaking with an LLM.
 
-[^1]: http://scadamag.infracritical.com/index.php/2018/03/01/purdue-model-history/
+[^1]: <http://scadamag.infracritical.com/index.php/2018/03/01/purdue-model-history/>

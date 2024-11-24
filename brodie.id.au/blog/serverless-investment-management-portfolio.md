@@ -84,3 +84,5 @@ The downside is potentially having to wait a needless couple of hundred millisec
 ## Security
 
 I should be in control of who sees my financial information. There's a [Datasette plugin](https://datasette.io/plugins/datasette-auth-github) that handles this.
+
+[^1]: <https://x.com/dompym/status/1847065224014451044>
