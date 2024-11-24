@@ -76,7 +76,7 @@ Scaling to zero is economical.
 
 The website will have many dozens of views per month.
 It's not running when you're not looking at it.
-It turns out you can wrap entire Python web applications with a Lambda Function.
+[It](https://github.com/abersheeran/a2wsgi) [turns](https://github.com/adamchainz/apig-wsgi) [out](https://mangum.fastapiexpert.com) you can wrap entire Python web applications with a Lambda Function!
 
 The downside is potentially having to wait a needless couple of hundred milliseconds.
 
