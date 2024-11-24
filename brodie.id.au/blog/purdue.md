@@ -121,7 +121,7 @@ But the Purdue model is more about reliability and less about information securi
 Firewalls between levels is a start, but I think we can do better.
 
 Forcing your square networks in a round Purdue model will result in bizarre pseudo-levels.
-Like level 3.5: *RUN DMZ*.
+Like level 3.5: *RUN DMZ*[^2].
 No, it is not in the Purdue Enterprise Reference Architecture[^1].
 Notice any confusion that arises when attempting to fit a square network management interface in a round Purdue level.
 If the Purdue model is a network segmentation model, then network management is out of scope.
@@ -129,3 +129,4 @@ If the Purdue model is a network segmentation model, then network management is 
 If you find yourself face-to-face with the Purdue model in a conference call, please confirm you are not speaking with an LLM.
 
 [^1]: <http://scadamag.infracritical.com/index.php/2018/03/01/purdue-model-history/>
+[^2]: <https://shop.libertyinnorthkorea.org/collections/t-shirts/products/run-dmz-t-shirt-2024>
