@@ -44,7 +44,7 @@ A few times a month, GitHub Actions triggers scheduled [workflows](https://githu
 
 ## A plain-text ledger
 
-Balances are written to a Beancount ledger (it's just a text file).
+Balances are written to a [Beancount](https://beancount.github.io/) ledger (it's just a text file).
 With Beancount you'd typically track *all* of your transactions, not just balances.
 Usually the hard work is all in categorising transactions.
 If we stick to just balances, it's pretty simple to automate.
