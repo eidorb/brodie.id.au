@@ -11,3 +11,15 @@ files from this content.
 
 A GitHub workflow (`.github/workflows/deploy.yml`) automatically builds and deploys
 the website when changed.
+
+
+## How to build and serve locally
+
+This installs dependencies, builds the website and opens index.html in a browser:
+
+```bash
+micromamba create --file environment.yml --yes
+micromamba activate "${PWD##*/}" # If dir name == environment name...
+poetry install
+sphinx-build -b html brodie.id.au _build && open _build/index.html
+```
