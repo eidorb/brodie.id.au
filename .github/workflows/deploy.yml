@@ -21,7 +21,7 @@ jobs:
           key: ${{ hashFiles('environment.yml', 'package-lock.json', 'poetry.lock') }}
           # Cache micromamba binary, environments and pipx installs.
           path: |
-            ./local/bin
+            ~/.local/bin
             ~/micromamba
             ~/.local/pipx
       # Install binaries, Mamba environment and Python dependencies if there is NOT a cache hit.
