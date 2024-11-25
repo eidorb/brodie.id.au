@@ -21,9 +21,10 @@ jobs:
           key: ${{ hashFiles('environment.yml', 'package-lock.json', 'poetry.lock') }}
           # Cache micromamba binary, environments and pipx installs.
           path: |
-            ./local/bin
+            ~/.local/bin
             ~/micromamba
             ~/.local/pipx
+      # Install binaries, Mamba environment and Python dependencies if there is NOT a cache hit.
       - if: steps.cache.outputs.cache-hit != 'true'
         run: |
           # Install latest micromamba (https://github.com/mamba-org/micromamba-releases/releases).
@@ -32,7 +33,7 @@ jobs:
           # Install Poetry.
           pipx install poetry~=1.8
 
-          # Create Mamba environment.
+          # Create Mamba environment from file.
           export MAMBA_ROOT_PREFIX=~/micromamba
           eval "$(micromamba shell hook -s posix)"
           micromamba create --file environment.yml --yes
