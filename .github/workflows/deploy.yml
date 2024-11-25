@@ -29,15 +29,14 @@ jobs:
           # Install micromamba.
           wget -qO- https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
 
-
           # Install Poetry.
           pipx install poetry~=1.8
 
           # Create Mamba environment.
           export MAMBA_ROOT_PREFIX=~/micromamba
           eval "$(./bin/micromamba shell hook -s posix)"
-          micromamba create --file environment.yml --yes
-          micromamba activate brodie.id.au
+          ./bin/micromamba create --file environment.yml --yes
+          ./bin/micromamba activate "${PWD##*/}" # If dir name == environment name...
 
           # Install Python package dependencies.
           poetry install
@@ -48,7 +47,7 @@ jobs:
       - run: |
           export MAMBA_ROOT_PREFIX=~/micromamba
           eval "$(./bin/micromamba shell hook -s posix)"
-          micromamba activate brodie.id.au
+          ./bin/micromamba activate "${PWD##*/}"
 
           # Set timezone so that Sphinx uses local dates.
           sudo timedatectl set-timezone Australia/Queensland
