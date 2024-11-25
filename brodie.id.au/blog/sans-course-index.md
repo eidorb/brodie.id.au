@@ -64,7 +64,7 @@ Contents maps topics to page numbers, in book order. Index maps topics to page n
 
 I liked the idea of using coloured tabs to mark books and chapter locations. I found some suitable coloured sticky tabs at Officeworks.
 
-```{figure} sans-course-contents-and-index-for-giac-exams/sticky-tabs.jpeg
+```{figure} sans-course-index/sticky-tabs.jpeg
 :alt: Coloured Post-it notes
 
 Coloured Post-it notes.
@@ -95,7 +95,7 @@ colours = [
 
 Here's a snippet of a generated Contents worksheet. You can see topics nested below a chapter with the same colour. Likewise, chapters are nested under a book with the same colour.
 
-```{figure} sans-course-contents-and-index-for-giac-exams/contents-worksheet.png
+```{figure} sans-course-index/contents-worksheet.png
 :alt: Contents worksheet
 :width: 50%
 
@@ -104,7 +104,7 @@ Contents worksheet.
 
 And here's what an Index worksheet looks like:
 
-```{figure} sans-course-contents-and-index-for-giac-exams/index-worksheet.png
+```{figure} sans-course-index/index-worksheet.png
 :alt: Index worksheet
 
 Index worksheet.
@@ -112,7 +112,7 @@ Index worksheet.
 
 Here are the course books and chapters identified with coloured sticky tabs.
 
-```{figure} sans-course-contents-and-index-for-giac-exams/sans-course-books.jpeg
+```{figure} sans-course-index/sans-course-books.jpeg
 :alt: SANS course books
 
 SANS course books and chapters marked with Post-it notes.
@@ -122,4 +122,9 @@ SANS course books and chapters marked with Post-it notes.
 
 - Use `figure` directive with captions instead of just images.
 - Fix header levels.
+```
+
+```{update} 26 November, 2024
+
+- Simplify post's filenames
 ```
