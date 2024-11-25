@@ -56,7 +56,7 @@ html_theme_options = {
     "path_to_docs": "brodie.id.au",
 }
 
-html_logo = "ambigram.svg"
+html_logo = "ambigram.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
