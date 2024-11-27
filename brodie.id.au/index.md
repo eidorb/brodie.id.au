@@ -6,4 +6,5 @@ This is my website.
 :hidden:
 
 blog
+tools
 ```
