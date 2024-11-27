@@ -39,19 +39,19 @@ This Bogle fella has some interesting [ideas](https://www.bogleheads.org/wiki/Re
 
 ## The system
 
-Several times a month, GitHub Actions triggers automated workflows.
+A few times a month, GitHub Actions triggers scheduled [workflows](https://github.com/eidorb/portfolio/actions).
 
 
 ## A plain-text ledger
 
-Balances are written to a Beancount ledger (it's just a text file).
+Balances are written to a [Beancount](https://beancount.github.io/) ledger (it's just a text file).
 With Beancount you'd typically track *all* of your transactions, not just balances.
 Usually the hard work is all in categorising transactions.
 If we stick to just balances, it's pretty simple to automate.
 
 Sometimes automatic retrieval breaks.
-These shitty bank websites change all the time 🤣!
-(At least there's [Up](https://developer.up.com.au).)
+These [shitty bank websites](https://github.com/eidorb/portfolio/tree/master/portfolio) change all the time 🤣!
+(At least there's [Up](https://developer.up.com.au)[^1].)
 
 Beancount ledgers are easily updated by hand. Balance entries looks like this:
 
@@ -67,7 +67,7 @@ Just keeping data in plain text files.
 Updates are infrequent enough so it simply rebuilds the database and website every update.
 GitHub Actions can make git commits on your behalf so your ledger stays up-to-date 💃.
 
-Oh, and if those Fort Knox banks (secured with single-factor authentication) try to block your connections originating from GitHub's ASN, you can just re-route your "hacking" via home using a lightweight [VPN](https://tailscale.com)!
+Oh, and if those Fort Knox banks (secured with single-factor authentication) try to block your connections originating from GitHub's ASN, you can just re-route your "hacking" via home using an [ephemeral](https://github.com/eidorb/portfolio/blob/ddf3d02b21e69e5aa343bfcdeff86d0e1fc91642/.github/workflows/test.yml#L53-L66) [Tailscale](https://tailscale.com) VPN connection!
 
 
 ## Infrastructure costs
@@ -76,7 +76,7 @@ Scaling to zero is economical.
 
 The website will have many dozens of views per month.
 It's not running when you're not looking at it.
-It turns out you can wrap entire Python web applications with a Lambda Function.
+[It](https://github.com/abersheeran/a2wsgi) [turns](https://github.com/adamchainz/apig-wsgi) [out](https://mangum.fastapiexpert.com) you can wrap entire Python web applications with a Lambda Function!
 
 The downside is potentially having to wait a needless couple of hundred milliseconds.
 
@@ -84,3 +84,5 @@ The downside is potentially having to wait a needless couple of hundred millisec
 ## Security
 
 I should be in control of who sees my financial information. There's a [Datasette plugin](https://datasette.io/plugins/datasette-auth-github) that handles this.
+
+[^1]: <https://x.com/dompym/status/1847065224014451044>
