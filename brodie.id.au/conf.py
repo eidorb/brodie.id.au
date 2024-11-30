@@ -26,7 +26,7 @@ copyright = "2020, 2021, 2024"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["ablog", "sphinx.ext.intersphinx", "myst_nb"]
+extensions = ["ablog", "sphinx.ext.intersphinx", "myst_nb", "sphinxext.opengraph"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -104,3 +104,8 @@ html_sidebars = {
         "ablog/archives.html",
     ],
 }
+
+# Open Graph (sphinxext.opengraph) config
+ogp_site_url = "https://brodie.id.au/"
+ogp_image = "_static/ambigram.png"
+ogp_use_first_image = True

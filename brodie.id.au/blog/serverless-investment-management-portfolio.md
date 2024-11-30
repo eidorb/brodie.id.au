@@ -3,12 +3,6 @@
 ```
 # Serverless investment management portfolio
 
-```{figure} portfolio-demo.png
-:alt: Index worksheet
-
-[portfolio-demo.brodie.id.au](https://portfolio-demo.brodie.id.au)
-```
-
 I built a system that helps manage investments.
 
 It does the following things:
@@ -22,6 +16,12 @@ It does the following things:
 
 You can check out a demo with example data [here](https://portfolio-demo.brodie.id.au),
 and view source code [here](https://github.com/eidorb/portfolio).
+
+```{figure} portfolio-demo.png
+:alt: Index worksheet
+
+[portfolio-demo.brodie.id.au](https://portfolio-demo.brodie.id.au)
+```
 
 
 ## Investment strategy
