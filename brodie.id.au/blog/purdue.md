@@ -1,15 +1,19 @@
-```{post} 24 April, 2020
-:author: Brodie Blackburn
-```
+---
+blogpost: true
+date: 24 April, 2020
+author: Brodie Blackburn
+# Include just the first line as description.
+ogp_description_length: 56
+---
 # Purdue model
+
+The [Purdue model](https://en.wikipedia.org/wiki/Purdue_Enterprise_Reference_Architecture) is not a security architecture model[^1].
 
 ```{figure} purdue.jpg
 :alt: At least it does not identify as a Pie Ass Fuck?
 
 Well, *technically*, it should identify as Purdue Level 3.15149 Pi As Fuck because it's a genderless XIoT device.
 ```
-
-The [Purdue model](https://en.wikipedia.org/wiki/Purdue_Enterprise_Reference_Architecture) is not a security architecture model[^1].
 
 
 ## A brief history of networks
